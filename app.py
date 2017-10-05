@@ -40,8 +40,9 @@ def welcome():
 @app.route('/logOut' , methods = ['POST', 'GET'])
 
 def logOut():
-    session.clear()
-    #session.pop('user')
+    #print "SFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    #session.clear()
+    session.pop('user')
     return render_template('logOut.html')
     
 

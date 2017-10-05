@@ -37,7 +37,7 @@ def welcome():
     else:
         return render_template('error.html' , errorMsg = "Password is wrong!")
 
-@app.route('/logOut')
+@app.route('/logOut' , methods = ['POST', 'GET'])
 
 def logOut():
     #session.clear()

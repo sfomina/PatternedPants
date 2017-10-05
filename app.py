@@ -13,7 +13,7 @@ passCode = "manahal"
 
 def root():
     if session.has_key('user'):
-        return render_template('welcome.html', name= session['user1'])
+        return render_template('welcome.html', name= session['user'])
     else:
         return render_template('form.html')
 
@@ -40,8 +40,8 @@ def welcome():
 @app.route('/logOut' , methods = ['POST', 'GET'])
 
 def logOut():
-    #session.clear()
-    session.pop('user')
+    session.clear()
+    #session.pop('user')
     return render_template('logOut.html')
     
 
